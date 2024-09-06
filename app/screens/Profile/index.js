@@ -12,6 +12,7 @@ import Header from "../../components/Header";
 import Login from "../Login";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import ProfileSetting from "../ProfileSetting";
 
 const Stack = createNativeStackNavigator();
 
@@ -63,8 +64,13 @@ const Profile = ({ route, navigation }) => {
             paddingTop: 80,
             paddingHorizontal: 20,
             backgroundColor: "skyblue",
+            gap: 20,
           }}
         >
+          <Button
+            onPress={() => navigation.navigate("ProfileSetting")}
+            title="Profile Settings"
+          />
           <Button onPress={() => navigation.navigate("Login")} title="Login" />
         </View>
       </SafeAreaView>
@@ -91,6 +97,7 @@ const ProfileScreen = ({ navigation }) => {
       >
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="ProfileSetting" component={ProfileSetting} />
       </Stack.Navigator>
     </NavigationContainer>
   );
