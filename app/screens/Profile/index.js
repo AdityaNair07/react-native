@@ -60,7 +60,7 @@ const Profile = ({ route, navigation }) => {
             zIndex: -1,
             width: "100%",
             height: "100%",
-            paddingTop: 100,
+            paddingTop: 80,
             paddingHorizontal: 20,
             backgroundColor: "skyblue",
           }}

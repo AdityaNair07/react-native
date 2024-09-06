@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, TextInput, Button } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native";
 import Header from "../../components/Header";
@@ -14,19 +14,30 @@ const Login = ({ navigation }) => {
           width: "100%",
           height: "100%",
           backgroundColor: "lightblue",
+          paddingTop: 20,
+          paddingHorizontal: 20,
+          gap: 20,
         }}
       >
-        <Text
+        <TextInput
+          placeholder="Enter Your Full Name"
           style={{
-            width: "100%",
-            textAlign: "center",
-            color: "white",
-            fontSize: 25,
-            paddingTop: 10,
+            paddingVertical: 5,
+            paddingHorizontal: 10,
+            backgroundColor: "white",
+            borderRadius: 5,
           }}
-        >
-          Login Page
-        </Text>
+        />
+        <TextInput
+          placeholder="Enter Your Email"
+          style={{
+            paddingVertical: 5,
+            paddingHorizontal: 10,
+            backgroundColor: "white",
+            borderRadius: 5,
+          }}
+        />
+        <Button title="Login" onPress={() => navigation.navigate("Profile")} />
       </SafeAreaView>
     </>
   );
